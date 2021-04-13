@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "https://astonishgong.github.io/reward_pool/static/js/main.851f2832.chunk.js",
+    "main.js.map": "https://astonishgong.github.io/reward_pool/static/js/main.851f2832.chunk.js.map",
+    "runtime~main.js": "https://astonishgong.github.io/reward_pool/static/js/runtime~main.2b59f30f.js",
+    "runtime~main.js.map": "https://astonishgong.github.io/reward_pool/static/js/runtime~main.2b59f30f.js.map",
+    "static/js/2.c110ec99.chunk.js": "https://astonishgong.github.io/reward_pool/static/js/2.c110ec99.chunk.js",
+    "static/js/2.c110ec99.chunk.js.map": "https://astonishgong.github.io/reward_pool/static/js/2.c110ec99.chunk.js.map",
+    "index.html": "https://astonishgong.github.io/reward_pool/index.html",
+    "precache-manifest.02665e797e0808bb5b0eca1a6cdaea40.js": "https://astonishgong.github.io/reward_pool/precache-manifest.02665e797e0808bb5b0eca1a6cdaea40.js",
+    "service-worker.js": "https://astonishgong.github.io/reward_pool/service-worker.js",
+    "static/media/baseLogo.png": "https://astonishgong.github.io/reward_pool/static/media/baseLogo.0fcce48b.png",
+    "static/media/circle.svg": "https://astonishgong.github.io/reward_pool/static/media/circle.0efc3d93.svg",
+    "static/media/down.svg": "https://astonishgong.github.io/reward_pool/static/media/down.67d0bb3d.svg",
+    "static/media/emailIcon.svg": "https://astonishgong.github.io/reward_pool/static/media/emailIcon.e8b8d9fc.svg",
+    "static/media/metamask.png": "https://astonishgong.github.io/reward_pool/static/media/metamask.023762b6.png",
+    "static/media/navbar-bg.png": "https://astonishgong.github.io/reward_pool/static/media/navbar-bg.64419ce1.png",
+    "static/media/twitterIcon.svg": "https://astonishgong.github.io/reward_pool/static/media/twitterIcon.d594fbdd.svg",
+    "static/media/walletconn.svg": "https://astonishgong.github.io/reward_pool/static/media/walletconn.8215855c.svg"
+  }
+}
