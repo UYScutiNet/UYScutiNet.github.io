@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.33dd7ef0.chunk.css",
+    "main.js": "/static/js/main.e7ee9391.chunk.js",
+    "main.js.map": "/static/js/main.e7ee9391.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c2e8e232.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c2e8e232.js.map",
+    "static/js/2.bb46c6d6.chunk.js": "/static/js/2.bb46c6d6.chunk.js",
+    "static/js/2.bb46c6d6.chunk.js.map": "/static/js/2.bb46c6d6.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.33dd7ef0.chunk.css.map": "/static/css/main.33dd7ef0.chunk.css.map",
+    "static/js/2.bb46c6d6.chunk.js.LICENSE.txt": "/static/js/2.bb46c6d6.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/static/media/bottom-bg.03a22c4b.eba90805.png",
+    "static/media/banner-bg.ba94d7be.png": "/static/media/banner-bg.ba94d7be.5585521a.png",
+    "static/media/os-price-logo-new.4595f864.png": "/static/media/os-price-logo-new.4595f864.926fe010.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c2e8e232.js",
+    "static/js/2.bb46c6d6.chunk.js",
+    "static/css/main.33dd7ef0.chunk.css",
+    "static/js/main.e7ee9391.chunk.js"
+  ]
+}
