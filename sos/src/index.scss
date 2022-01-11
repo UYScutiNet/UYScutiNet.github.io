@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Gotham";
+  src: url('./assets/fonts/Gotham-Font/GothamMedium.ttf');
+}
+
+@font-face {
+  font-family: "GothamRnd";
+  src: url('./assets/fonts/gotham-rounded/GothamRoundedMedium_21022.ttf');
+}
+
+
+body {
+  margin: 0;
+  font-family: "Montserrat";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+.App{
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
