@@ -77,14 +77,16 @@ const Home = () => {
 
   const load = async () => {
     const _web3 = createWeb3Instance(Web3.givenProvider);
-    const _contract = createStakingContractInstance(_web3);
+    const _stakingContract = createStakingContractInstance(_web3);
     const _tokenContract = createTokenContractInstance(_web3);
-    setStakingContract(_contract);
+    setStakingContract(_stakingContract);
     setTokenContract(_tokenContract);
     const _balaceWei = await _tokenContract.methods.balanceOf(account).call();
     setBalance(_web3.utils.fromWei(_balaceWei));
-    const _stakedbalanceWei = await _contract.methods.balanceOf(account).call();
-    setStakedBalance(_stakedbalanceWei);
+    const _stakedbalance = await _stakingContract.methods
+      .balanceOf(account)
+      .call();
+    setStakedBalance(_stakedbalance);
   };
 
   useEffect(() => {
