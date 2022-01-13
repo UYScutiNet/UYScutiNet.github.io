@@ -1,11 +1,11 @@
 const Chart = () => (
-  <svg width="617" height="430">
+  <svg className="w-full" viewBox="0 0 617 430">
     <circle cx="402" cy="215" r="215" fill="#00a266"></circle>
     <path d="M402 215,L402 0,A215 215 0 0 0 275 40,Z" fill="#014f30"></path>
     <path d="M402 215,L275 40,A215 215 0 0 0 200 289,Z" fill="#43c68e"></path>
     <path d="M402 215,L200 289,A215 215 0 0 0 402 430,Z" fill="#8edbb6"></path>
     <line
-      class="line-style"
+      className="line-style"
       x1="402"
       y1="0"
       x2="402"
@@ -14,7 +14,7 @@ const Chart = () => (
       stroke="#fff"
     ></line>
     <line
-      class="line-style"
+      className="line-style"
       x1="402"
       y1="215"
       x2="275"
@@ -23,7 +23,7 @@ const Chart = () => (
       stroke="#fff"
     ></line>
     <line
-      class="line-style"
+      className="line-style"
       x1="402"
       y1="215"
       x2="200"
@@ -31,26 +31,26 @@ const Chart = () => (
       strokeWidth="2"
       stroke="#fff"
     ></line>
-    <text class="text-style" x="305" y="65" fill="#fff">
+    <text className="text-style" x="305" y="65" fill="#fff">
       LP Incentive
     </text>
-    <text class="text-style" x="325" y="85" fill="#fff">
+    <text className="text-style" x="325" y="85" fill="#fff">
       10.00%
     </text>
-    <text class="text-style" x="265" y="330" fill="#fff">
+    <text className="text-style" x="265" y="330" fill="#fff">
       Staking Incentive
     </text>
-    <text class="text-style" x="305" y="350" fill="#fff">
+    <text className="text-style" x="305" y="350" fill="#fff">
       20%
     </text>
-    <text class="text-style" x="430" y="215" fill="#fff">
+    <text className="text-style" x="430" y="215" fill="#fff">
       Airdrop for OS users
     </text>
-    <text class="text-style" x="495" y="235" fill="#fff">
+    <text className="text-style" x="495" y="235" fill="#fff">
       50%
     </text>
     <line
-      class="line-style-black"
+      className="line-style-black"
       x1="0"
       y1="152"
       x2="170"
@@ -59,7 +59,7 @@ const Chart = () => (
       stroke="#000"
     ></line>
     <line
-      class="line-style-black"
+      className="line-style-black"
       x1="170"
       y1="152"
       x2="260"

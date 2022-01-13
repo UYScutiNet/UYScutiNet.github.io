@@ -1,7 +1,11 @@
 import styled from "styled-components";
+import Web3 from "web3";
+import { useWeb3React } from "@web3-react/core";
+import { toast } from "react-toastify";
 
 import { Images } from "../../data/images";
 import { Button, TitleTwo } from "../Styled";
+import { humanReadableAccount } from "../../core";
 
 const Container = styled.div`
   padding: 5rem 5%;
@@ -60,7 +64,63 @@ const AddBtn = styled.button`
   }
 `;
 
-const Claim = () => {
+const Claim = ({
+  handleConnectWallet,
+  stakingContract,
+  transactionPending,
+  setTransactionPending,
+}) => {
+  const { active, account } = useWeb3React();
+
+  const addToken = () => {
+    const web3 = new Web3(Web3.givenProvider);
+    web3.currentProvider.sendAsync(
+      {
+        method: "wallet_watchAsset",
+        params: {
+          type: "ERC20",
+          options: {
+            address: "0xA6f4d3105bFE3BC5F8625007234A19FF4eA8d26d",
+            symbol: "KKK",
+            decimals: 18,
+          },
+        },
+        id: 20,
+      },
+      console.log
+    );
+  };
+
+  const handleClaim = () => {
+    if (!stakingContract) {
+      toast.warn("connect wallet", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } else {
+      const id = toast.loading("Transaction pending");
+      setTransactionPending(true);
+      stakingContract.methods
+        .getReward()
+        .send({ from: account })
+        .once("receipt", (receipt) => {
+          toast.update(id, {
+            render: "Successfully Claimed",
+            type: "success",
+            isLoading: false,
+            autoClose: 3000,
+          });
+          console.log(receipt);
+          setTransactionPending(false);
+        });
+    }
+  };
+
   return (
     <Container>
       <TitleTwo text="CLAIM">{"CLAIM"}</TitleTwo>
@@ -74,8 +134,17 @@ const Claim = () => {
             <br /> {"YOUR WALLET"}
           </StepTopicTitle>
           <div className="mt-6">
-            <Button width="200" height="48">
-              {"Connect Wallet"}
+            <Button
+              onClick={handleConnectWallet}
+              width="200"
+              height="48"
+              className="bg-secondary"
+            >
+              {active
+                ? account
+                  ? humanReadableAccount(account)
+                  : "Connect wallet"
+                : "Connect wallet"}
             </Button>
           </div>
         </div>
@@ -84,7 +153,7 @@ const Claim = () => {
             {"STEP"}&nbsp;&nbsp;{"2"}
           </StepTitle>
           <StepTopicTitle>{"ESTIMATE YOUR REWARD"}</StepTopicTitle>
-          <div className="flex space-x-10 mt">
+          <div className="flex justify-between mt">
             <div>
               <div>{"$$ spent on OpenSea"}</div>
               <EstimateLine>
@@ -167,10 +236,22 @@ const Claim = () => {
             <br /> {"YOUR CLAIM"}
           </StepTopicTitle>
           <div className="mt-6 flex">
-            <Button width="200" height="48" disabled={true} textBase>
+            <Button
+              onClick={handleClaim}
+              width="200"
+              height="48"
+              textBase
+              className={
+                active && !transactionPending
+                  ? "cursor-pointer bg-secondary"
+                  : "cursor-not-allowed bg-disable"
+              }
+            >
               {"Claim Airdrop"}
             </Button>
-            <AddBtn className="ml-4">{"Add $SOS"}</AddBtn>
+            <AddBtn className="ml-4" onClick={addToken}>
+              {"Add $SOS"}
+            </AddBtn>
           </div>
         </div>
       </div>

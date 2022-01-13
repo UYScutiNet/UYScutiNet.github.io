@@ -86,7 +86,7 @@ const Distribution = () => {
           "$SOS is grateful to all NFT creators, collectors and markets for nurturing the entire NFT ecosystem. Special thanks go to OpenSea for its leadership in promoting NFT trading. To pay tribute, we have chosen OpenSea collectors to conduct our airdrop."
         }
       </TextOne>
-      <div className="grid md:grid-cols-2 grid-cols-1 mt-20">
+      <div className="grid md:grid-cols-2 grid-cols-1 mt-20 gap-10">
         <div>
           <ContentTitle>{"$SOS Token Distribution"}</ContentTitle>
           <WarningText>
@@ -136,17 +136,17 @@ const Distribution = () => {
               "The distribution is based on the total number of transactions (30% weight) and transaction volume on ETH, DAI & USDC (70% weight) on OpenSea. Users have until January 12, 2022 to claim their tokens, after which any remaining tokens will be sent to the DAO treasury. "
             }
           </TextTwo>
-          <div className="relative">
+          <div className="relative mt-5">
             <ChartWrap>
               <Chart />
             </ChartWrap>
-            <div className="absolute top-1/4 left-0">
+            <div className="absolute top-20% sm:top-1/4 md:top-20% xl:top-1/4 left-0">
               <Pietitle>{"OpenDao - 20%"}</Pietitle>
               <ContentList
                 listStyleImage={Images.listStyleImage}
                 fontSize="12px"
                 lineHeight="20px"
-                className="mt-6"
+                className="mt-6 3xl:mt-16"
               >
                 <li>{"Compensate Victims"}</li>
                 <li>{"Support emerging artists"}</li>

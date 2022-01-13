@@ -38,6 +38,7 @@ const Farm = () => {
         <a
           target="_blank"
           href="https://app.sushi.com/farm"
+          rel="noreferrer"
           className="text-primary"
         >
           {"app.sushi.com/farm"}

@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { useWeb3React } from "@web3-react/core";
 
 import { Images } from "../data/images";
+import { humanReadableAccount } from "../core";
 
 const Button = styled.button`
   position: fixed;
@@ -23,12 +25,22 @@ const Button = styled.button`
   }
 `;
 
-const ConnectWallet = () => {
+const ConnectWallet = ({ handleConnectWallet, isWrongChain }) => {
+  const { active, account } = useWeb3React();
+
   return (
-    <Button>
-      <img src={Images.wallet} alt="wallet" className="mr-2" />
-      {"Connect wallet"}
-    </Button>
+    <div>
+      <Button onClick={() => handleConnectWallet()}>
+        <img src={Images.wallet} alt="wallet" className="mr-2" />
+        {isWrongChain
+          ? "wrong chain"
+          : active
+          ? account
+            ? humanReadableAccount(account)
+            : "Connect wallet"
+          : "Connect wallet"}
+      </Button>
+    </div>
   );
 };
 

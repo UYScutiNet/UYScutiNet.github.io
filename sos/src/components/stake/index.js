@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 import InfoList from "./InfoList";
-import Operation from "./Operation";
+import ApproveStake from "./ApproveStake";
+import Unstake from "./Unstake";
 
 const Title = styled.div`
   font-size: 36px;
@@ -11,7 +12,7 @@ const Title = styled.div`
   line-height: 28px;
 `;
 
-const Stake = () => {
+const Stake = ({ stakingContract, tokenContract, balance, stakedBalance }) => {
   return (
     <div className="max-w-screen-xl mx-auto pt-32 pb-20 px-5%">
       <Title className="text-center mb-32">{"Staking Incentive"}</Title>
@@ -22,6 +23,7 @@ const Stake = () => {
         <a
           href="https://snapshot.org/#/theopendao.eth/proposal/"
           target="_blank"
+          rel="noreferrer"
           className="text-secondary"
         >
           {"here."}
@@ -35,8 +37,15 @@ const Stake = () => {
       </div>
       <InfoList />
       <div className="grid md:grid-cols-2 grid-cols-1">
-        <Operation type="stake" />
-        <Operation type="unstake" />
+        <ApproveStake
+          tokenContract={tokenContract}
+          stakingContract={stakingContract}
+          balance={balance}
+        />
+        <Unstake
+          stakingContract={stakingContract}
+          stakedBalance={stakedBalance}
+        />
       </div>
     </div>
   );

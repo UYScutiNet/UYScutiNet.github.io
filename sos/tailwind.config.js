@@ -17,9 +17,13 @@ module.exports = {
       },
       colors: {
         farm: "#eeeeee",
+        disable: "#7c7c7c",
+        primary: "#6ea8e7",
+        secondary: "#00c38b",
       },
-      screens: { xs: "500px" },
-      spacing: { "5%": "5%" },
+
+      screens: { xs: "500px", "3xl": "1680px" },
+      spacing: { "5%": "5%", "20%": "20%" },
     },
   },
   variants: {

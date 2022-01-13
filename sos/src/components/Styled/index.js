@@ -27,30 +27,6 @@ export const Title = styled.div`
   }
 `;
 
-export const Button = styled.button`
-  width: ${(props) => props.width}px;
-  height: ${(props) => props.height}px;
-  background: ${(props) => (props.disabled ? "#7c7c7c" : "#00c38bff")};
-  border-radius: 4px;
-  font-size: ${(props) => (props.textBase ? "16px" : "18px")};
-  font-weight: 500;
-  color: ${(props) => (props.disabled ? "#ccc" : "#fff")};
-  transition: all ease 0.4s;
-  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  ${(props) =>
-    props.disabled
-      ? ""
-      : " &:hover{color: #000; background: #c7c7c7; border: 1px solid #c7c7c7;}"}
-
-  @media(max-width:767px) {
-    font-size: 14px;
-    width: ${(props) => props.width * 0.7}px;
-  }
-`;
-
 export const TitleTwo = styled.div`
   position: relative;
   font-family: Gotham;
@@ -66,5 +42,23 @@ export const TitleTwo = styled.div`
     transform: translate(-50%, -50%);
     top: 10%;
     left: 50%;
+  }
+`;
+
+export const Button = styled.button`
+  width: ${(props) => props.width}px;
+  height: ${(props) => props.height}px;
+  border-radius: 4px;
+  font-size: ${(props) => (props.textBase ? "16px" : "18px")};
+  font-weight: 500;
+  color: ${(props) => (props.disabled ? "#ccc" : "#fff")};
+  transition: all ease 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    width: ${(props) => props.width * 0.7}px;
   }
 `;
