@@ -1,0 +1,1 @@
+(this["webpackJsonp@shibabitcoin/interface"]=this["webpackJsonp@shibabitcoin/interface"]||[]).push([[19],{1141:function(i,n,c){}}]);
