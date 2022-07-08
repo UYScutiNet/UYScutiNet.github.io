@@ -1,6 +1,6 @@
-## Welcome to Bright Space
+## Welcome to UYScuti Net
 
 ### Cryptocurrency / Blockchain Engineer
 
-I'm a junior Cryptocurrency Engineer. I'll always be ready with you.
+I'm a senior Blockchain/Web3/Solidity/P2E Game Engineer. I'll always be ready with you.
 
